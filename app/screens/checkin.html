@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>C4E · 05 Inchecken</title><link rel="stylesheet" href="../styles.css"></head>
+<body class="stage">
+<div class="phone"><div class="notch"></div>
+  <div class="screen bg-soft">
+    <div class="statusbar"><span>9:41</span><span class="icons"><svg class="cellbars" viewBox="0 0 18 12"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2" width="3" height="10" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg class="wifi" viewBox="0 0 16 12"><path d="M8 11.5l2.2-2.7a3.5 3.5 0 0 0-4.4 0L8 11.5z"/><path d="M3.2 6.1a7.6 7.6 0 0 1 9.6 0l-1.3 1.6a5.5 5.5 0 0 0-7 0L3.2 6.1z"/></svg><svg class="batt" viewBox="0 0 26 12"><rect x="0.7" y="0.7" width="21" height="10.6" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.3"/><rect x="2.3" y="2.3" width="15" height="7.4" rx="1.2"/><rect x="23" y="3.6" width="2" height="4.8" rx="1"/></svg></span></div>
+    <div class="topbar with-back" style="background:var(--surface-2);">
+      <a class="u" href="home.html" style="width:auto;"><button class="back-btn"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button></a>
+      <div class="topbar-title">Inchecken</div>
+    </div>
+
+    <!-- Shift summary -->
+    <div class="card" style="margin-top:14px;">
+      <div style="display:flex; align-items:center; gap:13px;">
+        <div class="thumb" style="width:56px;height:56px;background-image:url('https://crew4events.nl/assets/marketing/backstage_build.png')"></div>
+        <div style="flex:1;">
+          <div class="ev-name" style="font-size:15.5px;">Mysteryland 2025</div>
+          <div class="ev-role">Sitecrew · 15:00–23:00</div>
+        </div>
+        <div class="badge badge-green"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Bevestigd</div>
+      </div>
+    </div>
+
+    <!-- Map + location card -->
+    <div class="card" style="padding:0; overflow:hidden;">
+      <div style="height:140px; position:relative; background:
+          repeating-linear-gradient(0deg, #e9edf2 0 1px, transparent 1px 26px),
+          repeating-linear-gradient(90deg, #e9edf2 0 1px, transparent 1px 26px),
+          linear-gradient(135deg,#eef2f7,#e3e9f0);">
+        <!-- faux roads -->
+        <div style="position:absolute; top:46px; left:-10px; right:-10px; height:10px; background:#fff; transform:rotate(-7deg); box-shadow:0 0 0 1px #dfe4ea;"></div>
+        <div style="position:absolute; top:0; bottom:0; left:64%; width:9px; background:#fff; transform:rotate(6deg); box-shadow:0 0 0 1px #dfe4ea;"></div>
+        <div style="position:absolute; top:92px; left:-10px; right:-10px; height:7px; background:#fff; transform:rotate(3deg); box-shadow:0 0 0 1px #dfe4ea;"></div>
+        <!-- pin with pulse -->
+        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-60%);">
+          <div style="position:absolute; top:14px; left:50%; transform:translate(-50%,0); width:46px; height:46px; border-radius:50%; background:rgba(242,160,7,0.22);"></div>
+          <div style="position:relative; width:38px; height:38px; border-radius:50% 50% 50% 0; background:var(--orange); transform:rotate(-45deg); box-shadow:var(--e2); display:grid; place-items:center;">
+            <div style="width:13px;height:13px;border-radius:50%;background:#1A1305;transform:rotate(45deg);"></div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px; padding:14px 16px;">
+        <div style="width:40px;height:40px;border-radius:50%;background:var(--green-bg);display:grid;place-items:center;flex-shrink:0;">
+          <svg viewBox="0 0 24 24" stroke-width="2.6" stroke="var(--green-text)" fill="none" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div style="flex:1;">
+          <div style="font-weight:800; font-size:14.5px; letter-spacing:-0.02em;">Je bent op locatie</div>
+          <div class="subtle" style="font-size:12.5px; margin-top:1px;">Biddinghuizen · GPS bevestigd · ±12 m</div>
+        </div>
+        <button class="icon-btn" style="width:38px;height:38px;"><svg viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3M21 21v.01M21 17v.01M17 21v.01"/></svg></button>
+      </div>
+    </div>
+
+    <!-- Big check-in button -->
+    <div class="field" style="margin-top:16px;">
+      <a class="u" href="active-shift.html"><button class="btn btn-primary btn-block" style="padding:17px; font-size:16.5px;">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" style="width:21px;height:21px;"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Nu inchecken — 14:58
+      </button></a>
+      <div class="center subtle" style="font-size:12px; margin-top:10px;">Je begintijd wordt vastgelegd. De coördinator ziet direct dat je er bent.</div>
+    </div>
+
+    <!-- Steps -->
+    <div class="card" style="margin-top:16px;">
+      <div style="display:flex; align-items:center; gap:13px; margin-bottom:16px;">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:800;font-size:13px;"><svg viewBox="0 0 24 24" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" style="width:14px;height:14px;"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <div style="font-size:14px; font-weight:600; color:var(--ink-2);">Aangemeld &amp; bevestigd</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:13px; margin-bottom:16px;">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--orange);color:#1A1305;display:grid;place-items:center;font-weight:800;font-size:13px;">2</div>
+        <div style="font-size:14px; font-weight:700;">Inchecken op locatie</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:13px;">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--surface-2);color:var(--ink-3);display:grid;place-items:center;font-weight:800;font-size:13px;border:1.5px solid var(--line-2);">3</div>
+        <div style="font-size:14px; font-weight:600; color:var(--ink-3);">Uitchecken na je shift</div>
+      </div>
+    </div>
+    <div style="height:20px;"></div>
+  </div>
+</div>
+<script src="../qa-check.js"></script>
+</body></html>

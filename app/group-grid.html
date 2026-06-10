@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Crew4Events — Groep</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { background:#e9ebef; }
+  .wrap { margin:0 auto; padding:34px 34px 44px; }
+  .head { text-align:center; margin-bottom:24px; }
+  .head .wordmark { font-size:30px; }
+  .head p { color:#50535a; font-size:14px; margin-top:6px; font-weight:600; }
+  .grid { display:grid; gap:30px; justify-content:center; }
+  .cell .sh { border-radius:24px; overflow:hidden; box-shadow:var(--e3); border:1px solid #d2d5da; background:#000; }
+  .cell.wide .sh { background:#fff; }
+  .cell .sh img { width:100%; display:block; }
+  .cell .lbl { font-size:14px; font-weight:800; color:#1c1d22; margin-top:11px; letter-spacing:-0.01em; }
+  .cell .num { color:var(--orange-ink); font-weight:800; margin-right:6px; }
+  .cell .desc { font-size:12.5px; color:#6B7079; font-weight:500; margin-top:2px; }
+</style></head>
+<body>
+<div class="wrap" id="wrap">
+  <div class="head">
+    <div class="wordmark">Crew<span class="accent">4</span>Events</div>
+    <p id="subtitle"></p>
+  </div>
+  <div class="grid" id="grid"></div>
+</div>
+<script>
+const groups = {
+  auth: {
+    title: 'Onboarding & authenticatie — 15 schermen',
+    cols: 4, w: 1640,
+    items: [
+      ['splash','Splash','Opstart + merk'],
+      ['intro-1','Intro 1','Events'],
+      ['intro-2','Intro 2','Aanmelden in 2 taps'],
+      ['intro-3','Intro 3','Transparant verdienen'],
+      ['register-account','Aanmelden 1/5','Account + voorwaarden'],
+      ['register-verify','Verifiëren 2/5','6-cijferige OTP'],
+      ['register-personal','Over jou 3/5','Foto, naam, leeftijd'],
+      ['register-work','Je werk 4/5','Functies, afstand'],
+      ['register-verify-id','Verificatie 5/5','KvK + ID + AVB'],
+      ['permissions','Toestemmingen','Push + locatie'],
+      ['setup-faceid','Face ID','Biometrisch inloggen'],
+      ['register-success','Gelukt','Welkom + status'],
+      ['login','Inloggen','E-mail, social, biometrie'],
+      ['forgot','Wachtwoord vergeten','Herstellink'],
+      ['reset-password','Nieuw wachtwoord','+ sterkte-meter'],
+      ['reset-done','Gewijzigd','Bevestiging'],
+    ],
+  },
+  crew: {
+    title: 'Crewlid — 15 schermen',
+    cols: 4, w: 1640,
+    items: [
+      ['home','Home','Volgende shift + feed'],
+      ['shifts','Shifts','Zoeken & aanmelden'],
+      ['shift-detail','Shift detail','Info + aanmelden'],
+      ['claim-confirm','Aangemeld','Wacht op goedkeuring'],
+      ['checkin','Inchecken','GPS-kaart'],
+      ['active-shift','Actieve shift','Live timer + timeline'],
+      ['chat','Chat','Coördinator'],
+      ['checkout','Afronden','Uitchecken + rating'],
+      ['agenda','Agenda','Weekplanning'],
+      ['earnings','Verdiensten','Saldo + historie'],
+      ['profile','Profiel','Certificaten + AVB'],
+      ['notifications','Meldingen','Shifts, geld, compliance'],
+      ['settings','Instellingen','Notificaties, account'],
+      ['payout-settings','Uitbetaling','IBAN, ritme, KvK'],
+      ['help','Hulp','FAQ + contact'],
+    ],
+  },
+  ct: {
+    title: 'Klant & Team — 5 schermen',
+    cols: 3, w: 1300,
+    items: [
+      ['client-home','Klant home','Aanvragen + status'],
+      ['client-request-1','Aanvraag plaatsen','Type + prijsindicatie'],
+      ['client-approve','Uren goedkeuren','Basis facturatie'],
+      ['admin-match','Crew matchen','Geschikte crew + push'],
+      ['admin-dashboard','Admin dashboard (desktop)','KPI\\'s + compliance','wide'],
+    ],
+  },
+};
+const which = location.hash.replace('#','') || 'auth';
+const g = groups[which];
+document.getElementById('subtitle').textContent = g.title;
+const wrap = document.getElementById('wrap');
+wrap.style.width = g.w + 'px';
+const grid = document.getElementById('grid');
+grid.style.gridTemplateColumns = `repeat(${g.cols}, 1fr)`;
+let n = g.startNum || 1;
+for (const it of g.items) {
+  const [f,l,d,wide] = it;
+  const c = document.createElement('div');
+  c.className = 'cell' + (wide ? ' wide' : '');
+  if (wide) c.style.gridColumn = `span ${g.cols}`;
+  c.innerHTML = `<div class="sh"><img src="snapshots/${f}.png"></div>
+    <div class="lbl"><span class="num">${l.indexOf('stap')>-1?'':''}</span>${l}</div><div class="desc">${d}</div>`;
+  grid.appendChild(c);
+}
+</script>
+</body></html>

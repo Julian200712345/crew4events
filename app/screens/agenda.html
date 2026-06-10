@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>C4E · 06 Agenda</title><link rel="stylesheet" href="../styles.css"></head>
+<body class="stage">
+<div class="phone"><div class="notch"></div>
+  <div class="screen has-nav">
+    <div class="statusbar"><span>9:41</span><span class="icons"><svg class="cellbars" viewBox="0 0 18 12"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2" width="3" height="10" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg class="wifi" viewBox="0 0 16 12"><path d="M8 11.5l2.2-2.7a3.5 3.5 0 0 0-4.4 0L8 11.5z"/><path d="M3.2 6.1a7.6 7.6 0 0 1 9.6 0l-1.3 1.6a5.5 5.5 0 0 0-7 0L3.2 6.1z"/></svg><svg class="batt" viewBox="0 0 26 12"><rect x="0.7" y="0.7" width="21" height="10.6" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.3"/><rect x="2.3" y="2.3" width="15" height="7.4" rx="1.2"/><rect x="23" y="3.6" width="2" height="4.8" rx="1"/></svg></span></div>
+    <div class="topbar">
+      <div class="topbar-title" style="font-size:22px;">Mijn agenda</div>
+      <div class="topbar-right">
+        <button class="availpill" style="margin:0; padding:8px 14px 8px 10px; font-size:13px;"><svg viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Beschikbaar</button>
+      </div>
+    </div>
+
+    <!-- Week strip -->
+    <div style="display:flex; justify-content:space-between; padding:18px 16px 6px;">
+      <div style="text-align:center;"><div class="subtle" style="font-size:11px;">ma</div><div style="width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-weight:700;margin-top:4px;">12</div></div>
+      <div style="text-align:center;"><div class="subtle" style="font-size:11px;">di</div><div style="width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-weight:700;margin-top:4px;">13</div></div>
+      <div style="text-align:center;"><div class="subtle" style="font-size:11px;">wo</div><div style="width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-weight:700;margin-top:4px;background:var(--green-bg);color:var(--green-text);">14</div></div>
+      <div style="text-align:center;"><div class="subtle" style="font-size:11px;">do</div><div style="width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-weight:700;margin-top:4px;">15</div></div>
+      <div style="text-align:center;"><div class="subtle" style="font-size:11px;">vr</div><div style="width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-weight:800;margin-top:4px;background:var(--orange);color:#1A1A1A;">16</div></div>
+      <div style="text-align:center;"><div class="subtle" style="font-size:11px;">za</div><div style="width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-weight:700;margin-top:4px;background:var(--orange-tint);color:var(--orange-ink);">17</div></div>
+      <div style="text-align:center;"><div class="subtle" style="font-size:11px;">zo</div><div style="width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-weight:700;margin-top:4px;background:var(--orange-tint);color:var(--orange-ink);">18</div></div>
+    </div>
+    <div class="center subtle" style="font-size:12px; margin-bottom:4px;">● ingepland · ○ beschikbaar</div>
+
+    <!-- Upcoming -->
+    <div style="padding:18px 20px 0; font-size:13px; font-weight:800; color:var(--ink-3); text-transform:uppercase; letter-spacing:0.04em;">Vrijdag 16 mei</div>
+    <div class="shift" style="margin-top:10px;">
+      <div style="width:6px; border-radius:6px; background:var(--green-text); flex-shrink:0;"></div>
+      <div class="shift-main">
+        <div class="ev-name">Mysteryland 2025</div>
+        <div class="ev-role">Sitecrew · 15:00–23:00</div>
+        <div class="shift-meta"><span class="m"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Biddinghuizen</span></div>
+      </div>
+      <div class="shift-right"><span class="badge badge-green" style="font-size:11px;">Bevestigd</span><div class="rate-badge">€260</div></div>
+    </div>
+
+    <div style="padding:20px 20px 0; font-size:13px; font-weight:800; color:var(--ink-3); text-transform:uppercase; letter-spacing:0.04em;">Zaterdag 17 mei</div>
+    <div class="shift" style="margin-top:10px;">
+      <div style="width:6px; border-radius:6px; background:var(--orange); flex-shrink:0;"></div>
+      <div class="shift-main">
+        <div class="ev-name">Awakenings Spring</div>
+        <div class="ev-role">Op- &amp; afbouw · 09:00–17:00</div>
+        <div class="shift-meta"><span class="m"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Amsterdam</span></div>
+      </div>
+      <div class="shift-right"><span class="badge badge-orange" style="font-size:11px;">Wacht op klant</span><div class="rate-badge">€248</div></div>
+    </div>
+
+    <div style="padding:20px 20px 0; font-size:13px; font-weight:800; color:var(--ink-3); text-transform:uppercase; letter-spacing:0.04em;">Zondag 18 mei</div>
+    <div style="margin:10px 20px 0; border:1.5px dashed var(--line); border-radius:var(--r-lg); padding:18px; text-align:center;">
+      <div class="subtle" style="font-size:13px;">Beschikbaar — nog geen shift</div>
+      <a class="u" href="shifts.html"><button class="btn btn-outline" style="margin-top:10px; padding:9px 16px; font-size:13px;">Zoek shifts</button></a>
+    </div>
+  </div>
+
+  <div class="bottomnav">
+    <a class="nav-item" href="home.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>Home</a>
+    <a class="nav-item" href="shifts.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Shifts</a>
+    <a class="nav-item active" href="agenda.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Agenda</a>
+    <a class="nav-item" href="earnings.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9.5a3.5 2 0 0 0-3-1.5c-1.7 0-3 .9-3 2s1.3 2 3 2 3 .9 3 2-1.3 2-3 2a3.5 2 0 0 1-3-1.5M12 6v2m0 8v2"/></svg>Verdiensten</a>
+    <a class="nav-item" href="profile.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Profiel</a>
+  </div>
+</div>
+<script src="../qa-check.js"></script>
+</body></html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>C4E · 10 Aanvraag plaatsen</title><link rel="stylesheet" href="../styles.css"></head>
+<body class="stage">
+<div class="phone"><div class="notch"></div>
+  <div class="screen" style="padding-bottom:96px; background:var(--surface-2);">
+    <div class="statusbar"><span>9:41</span><span class="icons"><svg class="cellbars" viewBox="0 0 18 12"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2" width="3" height="10" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg class="wifi" viewBox="0 0 16 12"><path d="M8 11.5l2.2-2.7a3.5 3.5 0 0 0-4.4 0L8 11.5z"/><path d="M3.2 6.1a7.6 7.6 0 0 1 9.6 0l-1.3 1.6a5.5 5.5 0 0 0-7 0L3.2 6.1z"/></svg><svg class="batt" viewBox="0 0 26 12"><rect x="0.7" y="0.7" width="21" height="10.6" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.3"/><rect x="2.3" y="2.3" width="15" height="7.4" rx="1.2"/><rect x="23" y="3.6" width="2" height="4.8" rx="1"/></svg></span></div>
+    <div class="topbar with-back" style="background:#fff;">
+      <a class="u" href="client-home.html" style="width:auto;"><button class="back-btn"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button></a>
+      <div class="topbar-title">Nieuwe aanvraag</div>
+    </div>
+
+    <div class="section"><div class="progress"><span style="width:33%"></span></div><div class="subtle" style="margin-top:8px;">Stap 1 van 3 — wat heb je nodig?</div></div>
+
+    <div class="field"><label>Type crew</label>
+      <div class="chips" style="padding:0; flex-wrap:wrap;">
+        <span class="chip active">Sitecrew</span>
+        <span class="chip">Op- &amp; afbouw</span>
+        <span class="chip">Host(ess)</span>
+        <span class="chip">Manitou</span>
+      </div>
+    </div>
+
+    <div class="field"><label>Event / locatie</label><input value="Extrema Outdoor — Aquabest" /></div>
+
+    <div style="display:flex; gap:12px;">
+      <div class="field" style="flex:1;"><label>Datum</label><input value="20-06-2025" /></div>
+      <div class="field" style="flex:1;"><label>Aantal crew</label><input value="6" /></div>
+    </div>
+
+    <div style="display:flex; gap:12px;">
+      <div class="field" style="flex:1;"><label>Starttijd</label><input value="08:00" /></div>
+      <div class="field" style="flex:1;"><label>Eindtijd</label><input value="17:00" /></div>
+    </div>
+
+    <div class="field"><label>Bijzonderheden</label>
+      <input value="Veiligheidsschoenen verplicht" />
+    </div>
+
+    <!-- Live price estimate -->
+    <div style="margin:20px 20px 0; background:#fff; border:1px solid var(--line); border-radius:var(--r-lg); padding:16px;">
+      <div style="display:flex; justify-content:space-between; font-size:13px; color:var(--ink-2); margin-bottom:6px;"><span>6 crew × 9 uur × €32,50</span><span style="font-weight:700;">€1.755</span></div>
+      <div style="display:flex; justify-content:space-between; font-size:13px; color:var(--ink-2); margin-bottom:10px;"><span>Servicekosten</span><span style="font-weight:700;">incl.</span></div>
+      <div style="display:flex; justify-content:space-between; font-size:17px; font-weight:800; border-top:1px solid var(--line); padding-top:10px;"><span>Indicatie totaal</span><span style="color:var(--orange-ink);">€1.755</span></div>
+    </div>
+  </div>
+
+  <div style="position:absolute; bottom:0; left:0; right:0; background:#fff; border-top:1px solid var(--line); padding:14px 20px 22px;">
+    <a class="u" href="client-approve.html"><button class="btn btn-primary btn-block btn-lg">Volgende — crew kiezen</button></a>
+  </div>
+</div>
+<script src="../qa-check.js"></script>
+</body></html>

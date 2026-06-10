@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Crew4Events — App overzicht</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { background:linear-gradient(180deg,#eef0f4,#e4e6eb); }
+  .wrap { max-width:1320px; margin:0 auto; padding:48px 24px 90px; }
+  .hero { text-align:center; margin-bottom:14px; }
+  .hero .wordmark { font-size:42px; }
+  .hero p { color:#50535a; font-size:16px; margin-top:10px; font-weight:500; }
+  .hero .meta { display:flex; gap:10px; justify-content:center; margin-top:18px; flex-wrap:wrap; }
+  .hero .meta span { background:#fff; border:1px solid var(--line); border-radius:var(--r-pill); padding:8px 15px; font-size:13px; font-weight:600; color:var(--ink-2); box-shadow:var(--e1); }
+  .start { display:inline-flex; align-items:center; gap:8px; margin-top:22px; background:var(--orange); color:#1A1305; font-weight:800; font-size:15px; padding:14px 26px; border-radius:14px; text-decoration:none; box-shadow:var(--e-btn); }
+  .group-title { font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--ink-3); margin:44px 0 18px; padding-bottom:12px; border-bottom:2px solid var(--line-2); display:flex; align-items:center; gap:10px; }
+  .group-title .pill { background:var(--ink); color:#fff; border-radius:var(--r-pill); padding:4px 11px; font-size:11px; letter-spacing:0; }
+  .row { display:flex; flex-wrap:wrap; gap:30px; }
+  .item { width:286px; }
+  .item .frame { border-radius:30px; overflow:hidden; box-shadow:var(--e3); border:1px solid #d7dade; background:#000; transition:transform .16s, box-shadow .16s; }
+  .item a.frame-link { display:block; }
+  .item .frame:hover { transform:translateY(-6px); box-shadow:var(--e4); }
+  .item img { width:100%; display:block; }
+  .item.wide { width:100%; }
+  .item .cap { margin-top:13px; }
+  .item .cap .n { font-weight:800; font-size:15px; letter-spacing:-0.01em; }
+  .item .cap .d { font-size:13px; color:var(--ink-3); margin-top:3px; }
+  .flowline { font-size:12px; color:var(--ink-3); margin-top:5px; }
+  .flowline b { color:var(--orange-ink); }
+  a.plain { text-decoration:none; color:inherit; }
+  .legend { display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:14px; }
+</style></head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="wordmark">Crew<span class="accent">4</span>Events</div>
+    <p>Complete front-end — klikbaar prototype · branding 1:1 van crew4events.nl</p>
+    <div class="meta">
+      <span>30 schermen</span><span>Volledige auth &amp; onboarding</span><span>Crew · Klant · Team</span><span>Elke knop leidt ergens heen</span>
+    </div>
+    <div><a class="start" href="screens/splash.html">▶ Start de flow (Splash → app)</a></div>
+  </div>
+
+  <div class="group-title">Onboarding &amp; authenticatie <span class="pill">begin hier</span></div>
+  <div class="row" id="r-auth"></div>
+
+  <div class="group-title">Crewlid — de ZZP'er die shifts draait</div>
+  <div class="row" id="r-crew"></div>
+
+  <div class="group-title">Klant — festival / organisatie</div>
+  <div class="row" id="r-client"></div>
+
+  <div class="group-title">Team — Crew4Events backoffice</div>
+  <div class="row" id="r-admin"></div>
+
+  <div class="group-title">Design tokens</div>
+  <div class="legend">
+    <span class="badge" style="background:#F2A007;color:#1A1305;">#F2A007 oranje</span>
+    <span class="badge" style="background:#16181D;color:#fff;">#16181D ink</span>
+    <span class="badge" style="background:#F8F9FB;color:#16181D;border:1px solid #ECEDF0;">#F8F9FB surface</span>
+    <span class="badge" style="background:#E7F5ED;color:#0B7A41;">groen status</span>
+    <span class="badge" style="background:#FFF9EE;color:#7A4E0C;">oranje tint</span>
+    <span class="badge" style="background:#fff;color:#16181D;border:1px solid #ECEDF0;">Inter · 4/8px grid</span>
+  </div>
+</div>
+
+<script>
+const data = {
+  'r-auth': [
+    ['splash','Splash','Animatie bij opstart','→ Intro'],
+    ['intro','Intro / welkom','Waardepropositie + CTA','→ Aanmelden / Inloggen'],
+    ['login','Inloggen','E-mail, social, biometrie','→ Home'],
+    ['forgot','Wachtwoord vergeten','Herstellink aanvragen','→ Verifiëren'],
+    ['register-account','Aanmelden — stap 1','Account + voorwaarden','→ Verifiëren'],
+    ['register-verify','Verifiëren — stap 2','6-cijferige OTP-code','→ Gegevens'],
+    ['register-personal','Gegevens — stap 3','Naam, functies, reisafstand','→ Onderneming'],
+    ['register-work','Onderneming — stap 4','KvK-check + documenten','→ Gelukt'],
+    ['register-success','Registratie gelukt','Status + naar de app','→ Home'],
+  ],
+  'r-crew': [
+    ['home','Home','Volgende shift + feed','tabs + Inchecken/Details'],
+    ['shifts','Shifts zoeken','Zoeken, filteren, aanmelden','→ Shift detail'],
+    ['shift-detail','Shift detail','Alle info + aanmelden','→ Aangemeld'],
+    ['claim-confirm','Aangemeld','Wacht op goedkeuring','→ Home / Shifts'],
+    ['checkin','Inchecken','GPS-kaart + check-in','→ Actieve shift'],
+    ['active-shift','Actieve shift','Live timer + timeline','→ Chat / Uitchecken'],
+    ['chat','Chat coördinator','Berichten op locatie','↔ Actieve shift'],
+    ['checkout','Afronden &amp; rating','Uitchecken + review','→ Home'],
+    ['agenda','Agenda','Weekplanning','→ Shifts'],
+    ['earnings','Verdiensten','Saldo + historie',''],
+    ['profile','Profiel','Certificaten + AVB','→ Instellingen e.a.'],
+    ['notifications','Meldingen','Shifts, geld, compliance',''],
+    ['settings','Instellingen','Notificaties, account','→ Uitloggen'],
+    ['payout-settings','Uitbetaalgegevens','IBAN, ritme, KvK',''],
+    ['help','Hulp &amp; contact','FAQ + WhatsApp/bellen',''],
+  ],
+  'r-client': [
+    ['client-home','Klant home','Aanvragen + status','→ Nieuwe aanvraag'],
+    ['client-request-1','Aanvraag plaatsen','Type, datum, prijsindicatie','→ Crew kiezen'],
+    ['client-approve','Uren goedkeuren','Basis voor facturatie','→ Home'],
+  ],
+  'r-admin': [
+    ['admin-dashboard','Admin dashboard','KPI\\'s + compliance (desktop)','→ Match','wide'],
+    ['admin-match','Crew matchen','Geschikte crew + push','→ Dashboard'],
+  ],
+};
+for (const [rowId, items] of Object.entries(data)) {
+  const row = document.getElementById(rowId);
+  for (const it of items) {
+    const [file, name, desc, flow, wide] = it;
+    const el = document.createElement('div');
+    el.className = 'item' + (wide ? ' wide' : '');
+    el.innerHTML = `
+      <a class="plain frame-link" href="screens/${file}.html">
+        <div class="frame"${wide?' style="background:#fff;"':''}><img src="snapshots/${file}.png" loading="lazy"></div>
+      </a>
+      <div class="cap"><div class="n">${name}</div><div class="d">${desc}</div>${flow?`<div class="flowline"><b>${flow}</b></div>`:''}</div>`;
+    row.appendChild(el);
+  }
+}
+</script>
+</body></html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>C4E · Admin · Crew-pool</title><link rel="stylesheet" href="../styles.css"></head>
+<body class="admin">
+<div class="desktop">
+  <div class="sidebar">
+    <div class="side-brand">Crew<span class="accent">4</span>Events</div>
+    <a class="side-item" href="admin-dashboard.html"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg> Dashboard</a>
+    <a class="side-item" href="admin-requests.html"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> Aanvragen <span class="count">7</span></a>
+    <a class="side-item" href="admin-shifts.html"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Shifts</a>
+    <a class="side-item active" href="admin-pool.html"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg> Crew-pool</a>
+    <a class="side-item" href="admin-invoicing.html"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg> Facturatie</a>
+    <a class="side-item" href="admin-compliance.html"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Compliance <span class="count" style="background:var(--red);color:#fff;">3</span></a>
+    <div class="side-user"><div class="av">M</div><div><div style="font-weight:700; font-size:13px;">Mats</div><div style="font-size:11px; color:#9197a1;">Operatie</div></div></div>
+  </div>
+
+  <div class="main">
+    <div class="main-head">
+      <div class="mt">Crew-pool</div>
+      <div style="display:flex; gap:12px; align-items:center;">
+        <div class="searchbar"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><input placeholder="Zoek op naam of functie"></div>
+        <button class="btn btn-primary" style="padding:10px 16px; font-size:13px;"><svg viewBox="0 0 24 24" stroke="#1A1305"><path d="M12 5v14M5 12h14"/></svg> Crew uitnodigen</button>
+      </div>
+    </div>
+
+    <div class="kpis" style="grid-template-columns:repeat(4,1fr);">
+      <div class="kpi"><div class="label">Totaal in pool</div><div class="val">148</div></div>
+      <div class="kpi"><div class="label">Actief deze maand</div><div class="val">96</div><div class="trend" style="color:var(--green-text);">▲ 12</div></div>
+      <div class="kpi"><div class="label">AVB op orde</div><div class="val">94%</div><div class="trend" style="color:var(--orange-ink);">9 verlopen binnenkort</div></div>
+      <div class="kpi"><div class="label">Gem. beoordeling</div><div class="val">4.8 ★</div></div>
+    </div>
+
+    <div style="padding:20px 28px 0;">
+      <div class="seg-tabs"><div class="seg-tab active">Alle</div><div class="seg-tab">Sitecrew</div><div class="seg-tab">Op- &amp; afbouw</div><div class="seg-tab">Manitou</div><div class="seg-tab">Aandacht nodig</div></div>
+    </div>
+
+    <div style="padding:18px 28px 28px;">
+      <div class="panel">
+        <table class="dtable">
+          <thead><tr><th>Naam</th><th>Functies</th><th>Shifts</th><th>Rating</th><th>AVB</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><div style="display:flex; align-items:center; gap:11px;"><div class="av-sm" style="background:linear-gradient(135deg,var(--orange),var(--orange-700));color:#1A1305;">TV</div><b>Tom de Vries</b></div></td><td>Sitecrew, Op- &amp; afbouw</td><td>23</td><td>4.9 ★</td><td><span class="badge badge-orange">14 dgn</span></td><td><span class="badge badge-green">Actief</span></td><td><a class="u" href="admin-crew-detail.html" style="width:auto;"><button class="btn btn-outline" style="padding:6px 12px; font-size:12.5px;">Bekijk</button></a></td></tr>
+            <tr><td><div style="display:flex; align-items:center; gap:11px;"><div class="av-sm" style="background:linear-gradient(135deg,#15A05A,#0d7a43);">RB</div><b>Ruben Bakker</b></div></td><td>Op- &amp; afbouw</td><td>17</td><td>4.8 ★</td><td><span class="badge badge-green">OK</span></td><td><span class="badge badge-green">Actief</span></td><td><a class="u" href="admin-crew-detail.html" style="width:auto;"><button class="btn btn-outline" style="padding:6px 12px; font-size:12.5px;">Bekijk</button></a></td></tr>
+            <tr><td><div style="display:flex; align-items:center; gap:11px;"><div class="av-sm" style="background:linear-gradient(135deg,#5B8DEF,#2D6CDF);">JK</div><b>Jelle Klaassen</b></div></td><td>Sitecrew, Manitou</td><td>31</td><td>4.9 ★</td><td><span class="badge badge-green">OK</span></td><td><span class="badge badge-orange">DBA-risico</span></td><td><a class="u" href="admin-crew-detail.html" style="width:auto;"><button class="btn btn-outline" style="padding:6px 12px; font-size:12.5px;">Bekijk</button></a></td></tr>
+            <tr><td><div style="display:flex; align-items:center; gap:11px;"><div class="av-sm" style="background:#8a8f99;">SS</div><b>Sara Smit</b></div></td><td>Host(ess)</td><td>9</td><td>4.7 ★</td><td><span class="badge badge-red">Verlopen</span></td><td><span class="badge badge-grey">Geblokkeerd</span></td><td><a class="u" href="admin-crew-detail.html" style="width:auto;"><button class="btn btn-outline" style="padding:6px 12px; font-size:12.5px;">Bekijk</button></a></td></tr>
+            <tr><td><div style="display:flex; align-items:center; gap:11px;"><div class="av-sm" style="background:linear-gradient(135deg,#b06ab3,#7c4d9c);">LD</div><b>Lisa Dekker</b></div></td><td>Op- &amp; afbouw, Logistiek</td><td>14</td><td>4.7 ★</td><td><span class="badge badge-green">OK</span></td><td><span class="badge badge-green">Actief</span></td><td><a class="u" href="admin-crew-detail.html" style="width:auto;"><button class="btn btn-outline" style="padding:6px 12px; font-size:12.5px;">Bekijk</button></a></td></tr>
+            <tr><td><div style="display:flex; align-items:center; gap:11px;"><div class="av-sm" style="background:linear-gradient(135deg,#e67e22,#c0612a);">DV</div><b>Daan Vermeer</b></div></td><td>Sitecrew</td><td>5</td><td>4.6 ★</td><td><span class="badge badge-green">OK</span></td><td><span class="badge badge-blue">Nieuw</span></td><td><a class="u" href="admin-crew-detail.html" style="width:auto;"><button class="btn btn-outline" style="padding:6px 12px; font-size:12.5px;">Bekijk</button></a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../qa-check.js"></script>
+</body></html>

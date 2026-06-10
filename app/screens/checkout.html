@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>C4E · 14 Uitchecken & rating</title><link rel="stylesheet" href="../styles.css"></head>
+<body class="stage">
+<div class="phone"><div class="notch"></div>
+  <div class="screen" style="background:var(--surface-2); padding-bottom:96px;">
+    <div class="statusbar"><span>9:41</span><span class="icons"><svg class="cellbars" viewBox="0 0 18 12"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2" width="3" height="10" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg class="wifi" viewBox="0 0 16 12"><path d="M8 11.5l2.2-2.7a3.5 3.5 0 0 0-4.4 0L8 11.5z"/><path d="M3.2 6.1a7.6 7.6 0 0 1 9.6 0l-1.3 1.6a5.5 5.5 0 0 0-7 0L3.2 6.1z"/></svg><svg class="batt" viewBox="0 0 26 12"><rect x="0.7" y="0.7" width="21" height="10.6" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.3"/><rect x="2.3" y="2.3" width="15" height="7.4" rx="1.2"/><rect x="23" y="3.6" width="2" height="4.8" rx="1"/></svg></span></div>
+    <div class="topbar" style="background:#fff; justify-content:center;"><div class="topbar-title" style="text-align:center; flex:none;">Shift afronden</div></div>
+
+    <!-- Success -->
+    <div style="text-align:center; padding:30px 20px 10px;">
+      <div style="width:84px;height:84px;border-radius:50%;background:var(--green-bg);display:grid;place-items:center;margin:0 auto 16px;">
+        <svg viewBox="0 0 24 24" stroke-width="2.5" stroke="var(--green-text)" fill="none" stroke-linecap="round" style="width:42px;height:42px;"><path d="M20 6L9 17l-5-5"/></svg>
+      </div>
+      <div style="font-size:21px; font-weight:800;">Goed gewerkt, Tom!</div>
+      <div class="subtle" style="margin-top:4px;">Je shift bij Mysteryland is afgerond</div>
+    </div>
+
+    <!-- Summary -->
+    <div class="card">
+      <div style="display:flex; justify-content:space-between; padding:6px 0; font-size:14px;"><span class="muted">Ingecheckt</span><span style="font-weight:700;">14:58</span></div>
+      <div style="display:flex; justify-content:space-between; padding:6px 0; font-size:14px;"><span class="muted">Uitgecheckt</span><span style="font-weight:700;">23:04</span></div>
+      <div style="display:flex; justify-content:space-between; padding:6px 0; font-size:14px;"><span class="muted">Gewerkte uren</span><span style="font-weight:700;">8,0 u (excl. pauze)</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0 0; border-top:1px solid var(--line); margin-top:8px; font-size:16px;"><span style="font-weight:700;">Verdiend</span><span style="font-weight:800; color:var(--orange-ink);">€260,00</span></div>
+    </div>
+
+    <!-- Rate the event -->
+    <div style="padding:22px 20px 0;">
+      <div class="h2" style="font-size:16px; text-align:center; margin-bottom:12px;">Hoe was deze klus?</div>
+      <div style="display:flex; justify-content:center; gap:10px; font-size:34px; color:var(--orange);">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span style="color:var(--line);">★</span>
+      </div>
+    </div>
+
+    <div class="field" style="margin-top:18px;">
+      <input placeholder="Opmerking voor Crew4Events (optioneel)" />
+    </div>
+  </div>
+
+  <div style="position:absolute; bottom:0; left:0; right:0; background:#fff; border-top:1px solid var(--line); padding:14px 20px 22px;">
+    <a class="u" href="home.html"><button class="btn btn-primary btn-block btn-lg">Versturen &amp; afronden</button></a>
+  </div>
+</div>
+<script src="../qa-check.js"></script>
+</body></html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Crew4Events — Contact sheet</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { background:#e9ebef; }
+  .wrap { width:1480px; margin:0 auto; padding:38px 30px 50px; }
+  .head { text-align:center; margin-bottom:26px; }
+  .head .wordmark { font-size:34px; }
+  .head p { color:#50535a; font-size:14px; margin-top:6px; font-weight:600; }
+  .sec { font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:0.09em; color:#6B7079; margin:30px 0 14px; padding-bottom:9px; border-bottom:2px solid #d7dade; }
+  .grid { display:grid; grid-template-columns:repeat(5, 1fr); gap:22px; }
+  .cell { }
+  .cell .sh { border-radius:20px; overflow:hidden; box-shadow:var(--e2); border:1px solid #d2d5da; background:#000; }
+  .cell.wide { grid-column:span 2; }
+  .cell .sh img { width:100%; display:block; }
+  .cell .lbl { font-size:12px; font-weight:700; color:#222; margin-top:7px; letter-spacing:-0.01em; }
+  .cell .num { color:var(--orange-ink); font-weight:800; margin-right:5px; }
+</style></head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <div class="wordmark">Crew<span class="accent">4</span>Events</div>
+    <p>Complete front-end · 29 schermen · onboarding · crew · klant · team</p>
+  </div>
+
+  <div class="sec">Onboarding &amp; authenticatie</div>
+  <div class="grid" id="g-auth"></div>
+
+  <div class="sec">Crewlid</div>
+  <div class="grid" id="g-crew"></div>
+
+  <div class="sec">Klant &amp; Team</div>
+  <div class="grid" id="g-ct"></div>
+</div>
+<script>
+const auth = [
+  ['splash','Splash'],['intro','Intro'],['login','Inloggen'],['forgot','Wachtwoord vergeten'],
+  ['register-account','Aanmelden 1'],['register-verify','Verifiëren 2'],['register-personal','Gegevens 3'],
+  ['register-work','Onderneming 4'],['register-success','Gelukt'],
+];
+const crew = [
+  ['home','Home'],['shifts','Shifts'],['shift-detail','Shift detail'],['claim-confirm','Aangemeld'],
+  ['checkin','Inchecken'],['active-shift','Actieve shift'],['chat','Chat'],['checkout','Afronden'],
+  ['agenda','Agenda'],['earnings','Verdiensten'],['profile','Profiel'],['notifications','Meldingen'],
+  ['settings','Instellingen'],['payout-settings','Uitbetaling'],['help','Hulp'],
+];
+const ct = [
+  ['client-home','Klant home'],['client-request-1','Aanvraag'],['client-approve','Uren goedkeuren'],
+  ['admin-match','Crew matchen'],['admin-dashboard','Admin dashboard','wide'],
+];
+let n=1;
+function render(arr, id, cont){
+  const g=document.getElementById(id);
+  for(const it of arr){
+    const [f,l,w]=it;
+    const d=document.createElement('div');
+    d.className='cell'+(w?' wide':'');
+    d.innerHTML=`<div class="sh"${w?' style="background:#fff;"':''}><img src="snapshots/${f}.png"></div><div class="lbl"><span class="num">${String(n).padStart(2,'0')}</span>${l}</div>`;
+    g.appendChild(d); n++;
+  }
+}
+render(auth,'g-auth'); render(crew,'g-crew'); render(ct,'g-ct');
+</script>
+</body></html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>C4E · Admin · Crewlid</title><link rel="stylesheet" href="../styles.css"></head>
+<body class="admin">
+<div class="desktop">
+  <div class="sidebar">
+    <div class="side-brand">Crew<span class="accent">4</span>Events</div>
+    <a class="side-item" href="admin-dashboard.html"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg> Dashboard</a>
+    <a class="side-item" href="admin-requests.html"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> Aanvragen <span class="count">7</span></a>
+    <a class="side-item" href="admin-shifts.html"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Shifts</a>
+    <a class="side-item active" href="admin-pool.html"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg> Crew-pool</a>
+    <a class="side-item" href="admin-invoicing.html"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg> Facturatie</a>
+    <a class="side-item" href="admin-compliance.html"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Compliance <span class="count" style="background:var(--red);color:#fff;">3</span></a>
+    <div class="side-user"><div class="av">M</div><div><div style="font-weight:700; font-size:13px;">Mats</div><div style="font-size:11px; color:#9197a1;">Operatie</div></div></div>
+  </div>
+
+  <div class="main">
+    <div class="main-head">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <a class="u" href="admin-pool.html" style="width:auto;"><button class="back-btn"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button></a>
+        <div class="mt">Crewlid</div>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <button class="btn btn-outline" style="padding:10px 16px; font-size:13px;">Bericht</button>
+        <button class="btn btn-primary" style="padding:10px 16px; font-size:13px;">Inplannen</button>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1.4fr; gap:18px; padding:24px 28px 28px;">
+      <!-- Left: profile -->
+      <div style="display:flex; flex-direction:column; gap:18px;">
+        <div class="panel" style="padding:22px; text-align:center;">
+          <div class="av-sm" style="width:84px;height:84px;font-size:28px;margin:0 auto 14px;background:linear-gradient(135deg,var(--orange),var(--orange-700));color:#1A1305;">TV</div>
+          <div style="font-size:20px; font-weight:800; letter-spacing:-0.02em;">Tom de Vries</div>
+          <div class="subtle" style="font-size:13px; margin-top:2px;">de Vries Eventservices · Eindhoven</div>
+          <div style="display:flex; gap:8px; justify-content:center; margin-top:12px;">
+            <span class="badge badge-green">Actief</span>
+            <span class="badge badge-grey">★ 4.9</span>
+            <span class="badge badge-grey">23 shifts</span>
+          </div>
+          <div style="display:flex; gap:10px; margin-top:18px;">
+            <div class="tile" style="text-align:center; box-shadow:none;"><div class="v">186</div><div class="k">Uren</div></div>
+            <div class="tile" style="text-align:center; box-shadow:none;"><div class="v">0</div><div class="k">No-shows</div></div>
+            <div class="tile" style="text-align:center; box-shadow:none;"><div class="v">€4.8k</div><div class="k">Verdiend</div></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-head">Documenten</div>
+          <div class="trow"><div class="li-ic" style="background:var(--orange-tint); width:36px; height:36px;"><svg viewBox="0 0 24 24" stroke="var(--orange-ink)" fill="none" stroke-width="2" style="width:18px;height:18px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="ev"><div class="n">AVB-verzekering</div><div class="s" style="color:var(--orange-ink);">Verloopt over 14 dagen</div></div></div>
+          <div class="trow"><div class="li-ic" style="background:var(--green-bg); width:36px; height:36px;"><svg viewBox="0 0 24 24" stroke="var(--green-text)" fill="none" stroke-width="2.4" style="width:18px;height:18px;"><path d="M20 6L9 17l-5-5"/></svg></div><div class="ev"><div class="n">KvK-uittreksel</div><div class="s">91171261 · geldig</div></div></div>
+          <div class="trow"><div class="li-ic" style="background:var(--green-bg); width:36px; height:36px;"><svg viewBox="0 0 24 24" stroke="var(--green-text)" fill="none" stroke-width="2.4" style="width:18px;height:18px;"><path d="M20 6L9 17l-5-5"/></svg></div><div class="ev"><div class="n">Heftruckcertificaat</div><div class="s">Geldig t/m 2027</div></div></div>
+        </div>
+      </div>
+
+      <!-- Right: history + compliance -->
+      <div style="display:flex; flex-direction:column; gap:18px;">
+        <div class="panel">
+          <div class="panel-head">Shift-historie</div>
+          <table class="dtable">
+            <tbody>
+              <tr><td><b>Mysteryland 2025</b><div class="s" style="color:var(--ink-3); font-size:12px;">Sitecrew</div></td><td>16 mei</td><td>8,0 u</td><td>€260</td><td><span class="badge badge-green">Betaald</span></td></tr>
+              <tr><td><b>Kingsland</b><div class="s" style="color:var(--ink-3); font-size:12px;">Op- &amp; afbouw</div></td><td>27 apr</td><td>10,0 u</td><td>€325</td><td><span class="badge badge-green">Betaald</span></td></tr>
+              <tr><td><b>Paaspop 2025</b><div class="s" style="color:var(--ink-3); font-size:12px;">Sitecrew</div></td><td>21 apr</td><td>9,0 u</td><td>€270</td><td><span class="badge badge-green">Betaald</span></td></tr>
+              <tr><td><b>Awakenings NYE</b><div class="s" style="color:var(--ink-3); font-size:12px;">Sitecrew</div></td><td>31 dec</td><td>7,5 u</td><td>€244</td><td><span class="badge badge-green">Betaald</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel" style="border-color:var(--orange-line);">
+          <div class="panel-head" style="background:var(--orange-tint);">Actie nodig</div>
+          <div class="trow"><div class="li-ic" style="background:var(--orange-tint); width:36px; height:36px;"><svg viewBox="0 0 24 24" stroke="var(--orange-ink)" fill="none" stroke-width="2" style="width:18px;height:18px;"><path d="M12 9v4M12 17h.01"/><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg></div><div class="ev"><div class="n">Vraag nieuwe AVB-polis op</div><div class="s">Huidige verloopt 30 mei</div></div><button class="btn btn-primary" style="padding:7px 13px; font-size:12.5px;">Herinner</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../qa-check.js"></script>
+</body></html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>C4E · Admin · Aanvraag</title><link rel="stylesheet" href="../styles.css"></head>
+<body class="admin">
+<div class="desktop">
+  <div class="sidebar">
+    <div class="side-brand">Crew<span class="accent">4</span>Events</div>
+    <a class="side-item" href="admin-dashboard.html"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg> Dashboard</a>
+    <a class="side-item active" href="admin-requests.html"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> Aanvragen <span class="count">7</span></a>
+    <a class="side-item" href="admin-shifts.html"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Shifts</a>
+    <a class="side-item" href="admin-pool.html"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg> Crew-pool</a>
+    <a class="side-item" href="admin-invoicing.html"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg> Facturatie</a>
+    <a class="side-item" href="admin-compliance.html"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Compliance <span class="count" style="background:var(--red);color:#fff;">3</span></a>
+    <div class="side-user"><div class="av">M</div><div><div style="font-weight:700; font-size:13px;">Mats</div><div style="font-size:11px; color:#9197a1;">Operatie</div></div></div>
+  </div>
+
+  <div class="main">
+    <div class="main-head">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <a class="u" href="admin-requests.html" style="width:auto;"><button class="back-btn"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button></a>
+        <div><div class="mt">Extrema Outdoor</div><div class="subtle" style="font-size:13px;">Za 20 jun · 08:00–17:00 · Aquabest, Best</div></div>
+      </div>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <span class="badge badge-orange" style="font-size:13px; padding:8px 13px;">Te bemannen · 4/6</span>
+        <a class="u" href="admin-match.html" style="width:auto;"><button class="btn btn-primary" style="padding:10px 16px; font-size:13px;"><svg viewBox="0 0 24 24" stroke="#1A1305"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg> Crew matchen</button></a>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1.5fr 1fr; gap:18px; padding:24px 28px 28px;">
+      <!-- Left: assigned crew + open slots -->
+      <div style="display:flex; flex-direction:column; gap:18px;">
+        <div class="panel">
+          <div class="panel-head">Ingedeelde crew <span class="badge badge-green">4 bevestigd</span></div>
+          <div class="trow"><div class="av-sm" style="background:linear-gradient(135deg,var(--orange),var(--orange-700));color:#1A1305;">TV</div><div class="ev"><div class="n">Tom de Vries</div><div class="s">Sitecrew · 4.9 ★ · 6 km</div></div><span class="badge badge-green">Bevestigd</span></div>
+          <div class="trow"><div class="av-sm" style="background:linear-gradient(135deg,#15A05A,#0d7a43);">RB</div><div class="ev"><div class="n">Ruben Bakker</div><div class="s">Op- &amp; afbouw · 4.8 ★ · 14 km</div></div><span class="badge badge-green">Bevestigd</span></div>
+          <div class="trow"><div class="av-sm" style="background:linear-gradient(135deg,#5B8DEF,#2D6CDF);">JK</div><div class="ev"><div class="n">Jelle Klaassen</div><div class="s">Sitecrew · 4.9 ★ · 3 km</div></div><span class="badge badge-orange">Uitgenodigd</span></div>
+          <div class="trow"><div class="av-sm" style="background:#8a8f99;">LD</div><div class="ev"><div class="n">Lisa Dekker</div><div class="s">Op- &amp; afbouw · 4.7 ★ · 21 km</div></div><span class="badge badge-green">Bevestigd</span></div>
+          <div class="trow" style="background:var(--surface-2);"><div class="av-sm" style="background:var(--surface-3); color:var(--ink-3); border:1.5px dashed var(--line-2);">?</div><div class="ev"><div class="n" style="color:var(--ink-3);">Open plek · 5 van 6</div></div><a class="u" href="admin-match.html" style="width:auto;"><button class="btn btn-outline" style="padding:6px 12px; font-size:12.5px;">Match</button></a></div>
+          <div class="trow" style="background:var(--surface-2);"><div class="av-sm" style="background:var(--surface-3); color:var(--ink-3); border:1.5px dashed var(--line-2);">?</div><div class="ev"><div class="n" style="color:var(--ink-3);">Open plek · 6 van 6</div></div><a class="u" href="admin-match.html" style="width:auto;"><button class="btn btn-outline" style="padding:6px 12px; font-size:12.5px;">Match</button></a></div>
+        </div>
+      </div>
+
+      <!-- Right: details + client + actions -->
+      <div style="display:flex; flex-direction:column; gap:18px;">
+        <div class="panel">
+          <div class="panel-head">Details</div>
+          <div style="padding:16px 18px; display:flex; flex-direction:column; gap:12px;">
+            <div style="display:flex; justify-content:space-between; font-size:13.5px;"><span class="muted">Functie</span><b>Op- &amp; afbouw</b></div>
+            <div style="display:flex; justify-content:space-between; font-size:13.5px;"><span class="muted">Aantal</span><b>6 crew</b></div>
+            <div style="display:flex; justify-content:space-between; font-size:13.5px;"><span class="muted">Tarief klant</span><b>€32,50 / u</b></div>
+            <div style="display:flex; justify-content:space-between; font-size:13.5px;"><span class="muted">Tarief crew</span><b>€26,00 / u</b></div>
+            <div style="display:flex; justify-content:space-between; font-size:13.5px; border-top:1px solid var(--line); padding-top:12px;"><span class="muted">Marge (indicatie)</span><b style="color:var(--green-text);">€351</b></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-head">Opdrachtgever</div>
+          <div class="trow"><div class="av-sm" style="background:linear-gradient(135deg,#5B8DEF,#2D6CDF);">EX</div><div class="ev"><div class="n">Extrema Events</div><div class="s">Contact: Mark Jansen · 06-12345678</div></div></div>
+          <div style="padding:14px 18px;"><button class="btn btn-outline btn-block" style="padding:11px; font-size:13px;">Bericht naar klant</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../qa-check.js"></script>
+</body></html>
